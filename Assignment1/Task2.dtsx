@@ -1,0 +1,465 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/31/2026 4:09:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICS-LT-23J2HK3"
+  DTS:CreatorName="INFICS\prajbhandari"
+  DTS:DTSID="{3C852CE1-CAA9-4542-AD82-5EDEF3F0C5C9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Task2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{95AF6B94-A628-4D32-A343-8BB9E7C6E22C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Desktop]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F6EA7619-8671-4BFA-9692-1364C609C9C3}"
+      DTS:ObjectName="Desktop">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="C:\Users\prajbhandari\Desktop" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-23J2HK3.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0F6E1928-58DC-437C-ADE3-EFED88D0982C}"
+      DTS:ObjectName="ICS-LT-23J2HK3.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-23J2HK3;User ID=sa;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{0F6E1928-58DC-437C-ADE3-EFED88D0982C}ICS-LT-23J2HK3.sa;Trust Server Certificate=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOmI8WUgCB0e990ssh15x3AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADkokj1KStGzv/kRyCd4THyzp9a+mE0VboqSNHxxFD4dAAAAAAOgAAAAAIAACAAAABYhqAsugpcc1BY8v9R7Du3d4TzY87IjKa/zZlwmGE+sCAAAACFJDWuRRirP2oit22unvlDCbSLOC0veZ/85OxpGjIVeUAAAABfTV4bPKGNlxH+GiI+pdjlQ5xMxFDqJVfZ55/rX4OfJujTHftaBpklGKvrfl3iSTkz6N2afUlrmgRPOpFdYStQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-23J2HK3.tutorial.sa1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}"
+      DTS:ObjectName="ICS-LT-23J2HK3.tutorial.sa1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-23J2HK3;User ID=sa;Initial Catalog=tutorial;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-Package-{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}ICS-LT-23J2HK3.tutorial.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOmI8WUgCB0e990ssh15x3AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWwHg6YFaaA1dsoex4HeJXIaMn18BxxLfxcMbicqT0/wAAAAAOgAAAAAIAACAAAADyk+h506duhseUqLR7eaHrm9I/ZpA1j6ag6ZhaaZsfICAAAABcRD2U3BpYqu0uKSE3mcwklY+G0kpi+9F0HEo3rM+Nj0AAAACyxCzBt7t/3RkSgfIffaoNMlAys+sCTUeGnrhYu78Y4SgijOHwdWpWWQzjICIXbKK7vLurrc5ecUDNEh1yoeiZ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[test_directory]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F184BE8C-D8F0-4558-93FC-228C136AF040}"
+      DTS:ObjectName="test_directory">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="C:\Users\prajbhandari\Desktop\test_directory" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5CA33E42-0083-499F-A973-631DA3FB8326}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="currentID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2805E838-21C2-4043-924E-910E2D13C3FC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="databasename">
+      <DTS:VariableValue
+        DTS:DataType="8">tutorial</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{318DDAEC-511A-4E44-9BED-9D4A7E6E235E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="destinationpath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prajbhandari\Desktop\destination\ssis.txt</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DB10280C-728C-4843-9822-608437F87016}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="InputFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3C1563D4-1165-483B-BED6-95BF03D263AC}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="OutputFilePath">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4932B640-BB55-42E7-80DE-834305EDFB37}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="servername">
+      <DTS:VariableValue
+        DTS:DataType="8">ICS-LT-23J2HK3</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ACD6521E-DC27-4985-81E4-59EF50E06765}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sourcepath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prajbhandari\Desktop\ssis_test\ssis.txt</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{26E18475-3601-4065-8C91-06F55513FBFE}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::currentID] + 1"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ThisThat">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ACB5AD5D-118B-444B-A61C-9EE336A9D589}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clear Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{26B2D5E7-73B4-4E17-88BD-0D82F16A2DB4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clear Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}"
+          SQLTask:SqlStatementSource="truncate table FileImports" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File Path Reader"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{265A00B6-AC29-45DA-A3F3-25ABB3550328}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File Path Reader">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{71227BDF-26C1-4812-A5A2-E3753C99C8BC}"
+        DTS:ObjectName="{71227BDF-26C1-4812-A5A2-E3753C99C8BC}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\prajbhandari\Downloads\test2ssis" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\File Path Reader\insert file path"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{BEA7F7CC-5871-4A36-B597-3F6934B9A08B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="insert file path"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}"
+              SQLTask:SqlStatementSource="insert into FileImports (FilePath) values (?) " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::InputFilePath"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{865A5BE3-D12A-47CA-A171-7C88E58E14F0}"
+          DTS:ObjectName="{865A5BE3-D12A-47CA-A171-7C88E58E14F0}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::InputFilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\loop through file records"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{07C4C546-AF93-457C-A93A-62B410DD752C}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="loop through file records">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{4117BED9-958A-4C20-A3FE-2D431C1E76DB}"
+        DTS:ObjectName="{4117BED9-958A-4C20-A3FE-2D431C1E76DB}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::OutputFilePath" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\loop through file records\update to 1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A6248C2E-D45B-46D4-827D-7D7C4D8AF6A0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="update to 1"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}"
+              SQLTask:SqlStatementSource="update FileImports&#xA;set FileProcessed = 1&#xA;where ID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::currentID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{BDBCFC41-BAA8-424A-86CB-766D556A729F}"
+          DTS:ObjectName="{BDBCFC41-BAA8-424A-86CB-766D556A729F}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::currentID" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\select the null columns"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{33CBC4F7-D588-4FA8-B058-41A5D424DE61}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="select the null columns"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C6EB98B4-7E8C-44F5-AA7C-B52FBFEE8DF0}"
+          SQLTask:SqlStatementSource="select id from FileImports where fileprocessed is null"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::OutputFilePath" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9EDF6C6A-48A1-446B-801C-5A804C5E6113}"
+      DTS:From="Package\File Path Reader"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\select the null columns" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DC8BD230-9ECF-4B85-91EB-CAF4A94C046F}"
+      DTS:From="Package\Clear Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\File Path Reader" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{0BB75A54-59D0-4526-B29E-8260334AED00}"
+      DTS:From="Package\select the null columns"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\loop through file records" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="135.333333333334,42.6666666666667"
+          Id="Package\Clear Table"
+          TopLeft="12.7604160962317,44.8157889816156" />
+        <NodeLayout
+          Size="146.666666666667,42.6666666666667"
+          Id="Package\File Path Reader\insert file path"
+          TopLeft="18.1249982956798,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="210.666666666667,92"
+          Size="210.666666666667,134.666666666667"
+          Id="Package\File Path Reader"
+          TopLeft="235.156239487697,2.10964909964339" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\loop through file records\update to 1"
+          TopLeft="25.9583252587669,14.5087685717386" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="258,109.333333333334"
+          Size="258,152"
+          Id="Package\loop through file records"
+          TopLeft="467.031229122077,167.004384131237" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\select the null columns"
+          TopLeft="511.249977145345,51.7149117128822" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="445.822906154363,71.2456137395961">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.4270709909815,0"
+              Start="0,0"
+              End="57.9270709909815,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.9270709909815,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="595.640603133711,94.3815783795489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.6228057516881"
+              Start="0,0"
+              End="0,65.1228057516881">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.1228057516881" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="148.093749429565,67.7960523739628">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.062490058132,0"
+              Start="0,0"
+              End="79.562490058132,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.562490058132,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/1/2026 6:19:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICS-LT-23J2HK3"
+  DTS:CreatorName="INFICS\prajbhandari"
+  DTS:DTSID="{9E415187-5842-4C34-AFC6-B4F3BD42B9E2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F42A3250-C249-45EC-9F84-F5610608CF27}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-23J2HK3.tutorial.sa1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E13571CC-301F-4F39-AA70-13BF5E698ED1}"
+      DTS:ObjectName="ICS-LT-23J2HK3.tutorial.sa1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-23J2HK3;User ID=sa;Initial Catalog=tutorial;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-Package2-{E13571CC-301F-4F39-AA70-13BF5E698ED1}ICS-LT-23J2HK3.tutorial.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOmI8WUgCB0e990ssh15x3AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJDbpwQHcasjBG7ORQem7pkyYSsD2gx4jlnJFqXv2x3gAAAAAOgAAAAAIAACAAAADF7aCQ5bmFh1vlrIG0v0A51zMcQrD5Dp26CfM5GfXxCCAAAABq/3UwRaNiWm7/TAeNZEU01Oj3EaNgUp9sTOJzbK6QOkAAAAC8KHFWDJoOY421pCfpD6UB1X8SK3gLPbzeGMvda32N3NmAeH45zjwlED9hJC1HXkOGZf39sDy3RqLIowSMKv8y</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Process Task"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{138884EC-36AC-4595-A2E5-48411F6542F0}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Process Task"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+          Arguments="Compress-Archive -Path &quot;C:\Users\prajbhandari\Downloads\this\testing.txt&quot; -DestinationPath &quot;C:\Users\prajbhandari\Downloads\this\testing.zip&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Script Task"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Script Task"
+      DTS:DTSID="{34A20502-2E21-4E27-B705-35D1D7F0322F}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Script Task"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_acc02c41a7c249958a690507992de800"
+          VSTAMajorVersion="17"
+          VSTAMinorVersion="0"
+          Language="CSharp" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="185.333333333334,42.6666666666667"
+          Id="Package\Execute Process Task"
+          TopLeft="156.249993015081,258.631576107645" />
+        <NodeLayout
+          Size="133.333333333334,42.6666666666667"
+          Id="Package\Script Task"
+          TopLeft="246.874988963828,147.789472061511" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
